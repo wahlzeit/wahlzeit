@@ -1,7 +1,9 @@
 package org.wahlzeit.model;
 
+
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.Work;
+
 import org.junit.ClassRule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
@@ -24,6 +26,7 @@ public class GuestTest {
 
 	@Test
 	public void testNameGeneration() {
+
 		int clientId = ClientManager.lastClientId.intValue();
 		assertNewGuestHasId(++clientId);
 		assertNewGuestHasId(++clientId);
@@ -53,7 +56,7 @@ public class GuestTest {
 		});
 		String userName = testGuest.getId();
 		String expectedUserName = Guest.GUEST_PREFIX + id;
-		assertEquals(expectedUserName, userName);
+		assertEquals(expectedUserName, "asd");
 	}
 
 	protected void testGetGuestFromUserManager(String name) {
